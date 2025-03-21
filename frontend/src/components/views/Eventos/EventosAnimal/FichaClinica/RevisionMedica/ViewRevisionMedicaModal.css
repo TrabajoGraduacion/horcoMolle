@@ -1,0 +1,159 @@
+.revision-medica-modal .modal-content {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.revision-content {
+  padding: 0.5rem;
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 1.5rem;
+}
+
+.nav-link {
+  border: none !important;
+  padding: 0.75rem 1.25rem;
+  color: #6c757d;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-link.active {
+  color: #0d6efd !important;
+  background: transparent !important;
+  border-bottom: 2px solid #0d6efd !important;
+  margin-bottom: -2px;
+}
+
+.tab-content {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.info-section {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.info-section:hover {
+  transform: translateY(-3px);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.form-group {
+  margin-bottom: 0.75rem;
+}
+
+.form-label {
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+}
+
+.form-control:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-content {
+  display: grid;
+  gap: 1rem;
+}
+
+.info-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.info-item label {
+  display: block;
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.info-item p {
+  margin: 0;
+  color: #212529;
+  font-size: 1rem;
+}
+
+.info-value {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.animal-type-indicator {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.animal-type-indicator .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+h6 {
+  color: #495057;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.info-section + .info-section {
+  margin-top: 1.5rem;
+}
+
+.revision-medica-modal .modal-dialog {
+  max-width: 800px;
+  margin: 1.75rem auto;
+}

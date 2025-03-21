@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    restart: unless-stopped
+    environment:
+      - VITE_API_USUARIO=http://backend:4500/api/
+      - VITE_CLOUDINARY_API_KEY=329123444765674
+      - VITE_CLOUDINARY_CLOUD_NAME=dqrpge93t
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4500:4500"
+    depends_on:
+      - mongodb
+    environment:
+      - URI=mongodb://mongodb:27017/horcomolle
+      - PORT=4500
+      - JWT=1d35685e80f7d5e0cff6001e03bf78639ca0ee406ddf15751b91fdaaaf057b2d
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo-data:

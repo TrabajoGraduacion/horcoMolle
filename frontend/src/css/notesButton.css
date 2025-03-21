@@ -1,0 +1,177 @@
+.test {
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex;
+    align-items: end;
+    gap: 3rem;
+}
+
+.buttonNotesShape {
+    width: 10rem;
+    height: 2.5rem;
+}
+.chartBtnContainer .buttonNotesShape {
+    flex-grow: 1;
+}
+.notesButton {
+    position: absolute;
+    width: 10rem;
+    height: 2rem;
+    padding: 1.2rem;
+    background-color: #70aa68;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s;
+}
+.chartBtnContainer .notesButton {
+    width: 100%;
+}
+
+.notesScreen {
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    min-width: 300px;
+    max-width: 400px;
+    max-height: 500px;
+    background-color: #70aa68;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    overflow-y: auto;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.notesScreen::-webkit-scrollbar {
+    width: 10px; /* Ancho de la scrollbar */
+}
+
+.notesScreen::-webkit-scrollbar-thumb {
+    background-color: #fff; /* Color del thumb (barra de desplazamiento) */
+    border-radius: 6px; /* Redondeamos las esquinas del thumb */
+    border-right: #70aa68 2px solid;
+    border-top: #70aa68 2px solid;
+    border-bottom: #70aa68 2px solid;
+}
+
+.notesScreen::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del track (área donde se desplaza el thumb) */
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    gap: 3px;
+    width: 100%;
+}
+
+.noteTitle {
+    color: white;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.notesTag {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.noteText {
+    color: white;
+}
+
+.noteWriter {
+    color: white;
+    font-style: italic;
+    font-size: small;
+}
+
+.notesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.notePanel {
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.noteArea {
+    resize: none;
+    background-color: #70aa68;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    padding: 5px;
+}
+
+.noteTitleForm {
+    background-color: #70aa68;
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    padding: 5px;
+}
+
+.noteForm {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: start !important;
+    align-items: none !important;
+    width: 100% !important;
+}
+
+.noteFormLabel {
+    color: white;
+}
+
+.noteResponseMessage {
+    color: white;
+    height: 100vh;
+}
+
+.deleteText {
+    color: white;
+    font-size: 0.75rem;
+}
+
+.h-90vh {
+    height: 90vh;
+}
+
+.boton-error {
+    width: 100% !important;
+}
+
+/*Responsive*/
+@media all and (min-width: 768px) {
+    .boton-error {
+        width: 25vw !important;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .boton-error {
+        width: 20vw !important;
+    }
+}

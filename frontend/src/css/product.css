@@ -1,0 +1,73 @@
+/* Estilos existentes */
+.table-striped > thead > tr.table-header,
+.table > thead > tr.table-header {
+  background-color: #70AA68 !important;
+  color: white; /* Para mejor contraste */
+}
+
+.table-striped > thead > tr.table-header > th,
+.table > thead > tr.table-header > th {
+  background-color: #70AA68 !important;
+  color: white; /* Para mejor contraste */
+}
+
+.form-check-input:checked {
+  background-color: #70AA68 !important;
+  border-color: #70AA68 !important;
+}
+
+.form-check-label {
+  color: #70AA68;
+}
+
+/* Nuevos estilos para responsividad */
+.container {
+  padding: 15px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .css-b62m3t-container {
+    margin-bottom: 15px;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  .col {
+    margin-bottom: 15px;
+  }
+
+  /* Ajustes para la tabla */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 600px;
+  }
+
+  /* Ajustes para los botones y el switch */
+  .d-flex.justify-content-between.align-items-center {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .form-check {
+    margin-bottom: 15px;
+  }
+
+  .btn-success {
+    width: 100%;
+  }
+}
+
+/* Estilos para la tabla en todos los dispositivos */
+.table-responsive {
+  margin-top: 20px;
+}

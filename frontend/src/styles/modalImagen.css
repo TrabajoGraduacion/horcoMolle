@@ -1,0 +1,5 @@
+.uploadedImage img {
+    max-width: 100%;
+    max-height: 300px; /* Limitar la altura máxima */
+    object-fit: contain;
+}

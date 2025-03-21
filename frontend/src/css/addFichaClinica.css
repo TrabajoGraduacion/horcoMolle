@@ -1,0 +1,23 @@
+.revision-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .revision-item {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s;
+  }
+  
+  .revision-item:hover {
+    background-color: #e9ecef;
+  }
+  
+  .btn-link {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .btn-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }

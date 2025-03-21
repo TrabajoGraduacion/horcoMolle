@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "front-merc": {
+      "appLocation": ".",
+      "outputLocation": "dist",
+      "appBuildCommand": "npm run build",
+      "run": "npm run dev",
+      "appDevserverUrl": "http://localhost:5173",
+      "appName": "front-proyecto-merc",
+      "resourceGroup": "front-proyecto-merc-rg",
+      "navigationFallback": {
+        "rewrite": "/index.html"
+      }
+    }
+  }
+}

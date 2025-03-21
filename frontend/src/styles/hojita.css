@@ -1,0 +1,104 @@
+.table-container {
+    scrollbar-color: #b0f2c2;
+    overflow-x: scroll;
+}
+
+.custom-table {
+    min-width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #70aa68;
+    padding: 8px;
+    text-align: left;
+    min-width: 10rem;
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #70aa68;
+    font-weight: bold;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.custom-button {
+    padding: 10px 20px;
+    background-color: #70aa68;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.custom-button:hover {
+    background-color: #70aa68;
+    opacity: 0.8;
+}
+
+.editable-input {
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.delete-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    padding: 2px 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.delete-button:hover {
+    font-weight: bold;
+    opacity: 1;
+}
+
+* {
+    scrollbar-width: auto; /* Tamaño de la barra de desplazamiento */
+    scrollbar-color: #70aa68 #b0f2c2; /* Color de la barra de desplazamiento y el fondo */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.header-logo {
+    max-width: 100px;
+    height: auto;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #70aa68 #b0f2c2;
+}
+
+@media screen and (max-width: 768px) {
+    .custom-table th,
+    .custom-table td {
+        min-width: 8rem;
+    }
+}

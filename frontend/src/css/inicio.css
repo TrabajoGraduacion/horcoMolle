@@ -1,0 +1,524 @@
+/* Layout principal */
+.ordenGeneralInicio {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+    position: relative;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
+  }
+  
+  /* Sidebar */
+  .sidebar-custom {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    height: 100vh !important;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background-color: #caf4c4;
+    overflow: hidden !important;
+    overflow-x: hidden;
+    border-radius: 0 35px 35px 0;
+    width: 80px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Ajustes del menú principal */
+  .sidebar-custom .ps-menu-root {
+    position: sticky;
+    top: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px 0;
+    height: 100% !important;
+    min-height: unset !important;
+    overflow: hidden !important;
+  }
+  
+  /* Contenedor del menú */
+  .ps-menu-root > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    overflow: hidden !important;
+    height: 100% !important;
+    min-height: unset !important;
+    padding-bottom: 60px !important;
+  }
+  
+  /* Grupo principal de menú items */
+  .ps-menu-root > div > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    gap: 25px;
+    overflow: hidden !important;
+    height: auto !important;
+    min-height: unset !important;
+  }
+  
+  /* Ajustes para los items del menú */
+  .sidebar-custom .ps-menu-button {
+    height: 60px !important;
+    min-height: 60px;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.2s ease !important;
+    margin: 8px 0;
+  }
+  
+  /* Botón de logout */
+  .logout-button {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: calc(100% - 20px) !important;
+  }
+  
+  .sidebar-custom .ps-menu-icon {
+    font-size: 24px !important;
+    min-width: 45px !important;
+  }
+  
+  .sidebar-custom .ps-menu-label {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+  
+  /* Cuando está colapsado */
+  .sidebar-custom.ps-collapsed .ps-menu-label {
+    opacity: 0;
+  }
+  
+  /* Ajuste del contenido principal */
+  .inicioArreglo {
+    flex: 1;
+    margin-left: 80px !important;
+    padding: 20px;
+    width: calc(100% - 80px);
+    transition: all 0.3s ease;
+  }
+  
+  /* Header con nombre y fecha */
+  .ordenDerechaInicio {
+    margin-bottom: 30px;
+  }
+  
+  .nombreInicio {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .tituloInicio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fechaInicio {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Cards y contenedores */
+  .bg-custom {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .bg-custom:hover {
+    transform: translateY(-5px);
+  }
+  
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Botones y enlaces */
+  .btn-outline-success {
+    border-width: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-success:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Manual de usuario (signo de interrogación) */
+  .text-decoration-none .bg-custom {
+    background: #8ebe94;
+    transition: all 0.3s ease;
+  }
+  
+  .text-decoration-none .bg-custom:hover {
+    background: #70aa68;
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para tablets */
+  @media (max-width: 1024px) {
+    .inicioArreglo {
+      margin-left: 60px !important;
+      width: calc(100% - 60px);
+      padding: 15px;
+    }
+  
+    .tituloInicio {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Estilos para móvil */
+  @media (max-width: 767px) {
+    .ordenGeneralInicio {
+      flex-direction: column;
+    }
+  
+    .sidebar-custom {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 60px !important; /* Reducimos el ancho */
+        height: 100vh !important;
+        z-index: 1000;
+        padding: 20px 0;
+        overflow: hidden !important;
+        -webkit-overflow-scrolling: touch; /* Mejor scroll en iOS */
+    }
+      
+      .sidebar-custom .ps-menu-button {
+        padding: 8px !important;
+        height: 50px !important;
+        width: 50px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 10px auto !important;
+      }
+      
+      .sidebar-custom .ps-menu-icon {
+        font-size: 22px !important;
+        margin: 0 !important;
+      }
+      
+  
+      .inicioArreglo {
+        margin-left: 70px !important;
+        width: calc(100% - 70px) !important;
+      }
+    
+      .inicioArreglo.sidebar-expanded {
+        margin-left: 70px !important;
+        width: calc(100% - 70px) !important;
+      }
+  
+    .nombreInicio {
+      padding: 15px;
+    }
+  
+    .tituloInicio {
+      font-size: 1.8rem;
+    }
+  
+    .fechaInicio {
+      font-size: 1rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .inicioArreglo > * {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  /* ... resto del CSS ... */
+
+/* Estilos para móvil */
+@media (max-width: 767px) {
+    .ordenGeneralInicio {
+      flex-direction: row; /* Cambiamos a row para mantener el layout horizontal */
+    }
+  
+    .sidebar-custom {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 60px !important; /* Reducimos aún más el ancho en móvil */
+      height: 100vh !important;
+      z-index: 1000;
+      padding: 20px 0;
+      overflow: hidden !important;
+      -webkit-overflow-scrolling: touch; /* Mejor scroll en iOS */
+    }
+    
+    /* Desactivamos la expansión en móvil */
+    .sidebar-custom:hover {
+      width: 60px !important;
+    }
+  
+    /* Ocultamos siempre las etiquetas en móvil */
+    .sidebar-custom .ps-menu-label {
+      display: none !important;
+    }
+    
+    .sidebar-custom .ps-menu-button {
+      height: 50px !important;
+      width: 50px !important;
+      padding: 8px !important;
+      margin: 10px auto !important;
+    }
+    
+    .sidebar-custom .ps-menu-icon {
+      font-size: 22px !important;
+      margin: 0 !important;
+    }
+  
+    .inicioArreglo {
+      margin-left: 60px !important; /* Ajustamos el margen al nuevo ancho del sidebar */
+      padding: 10px;
+      width: calc(100% - 60px) !important;
+      max-width: calc(100% - 60px) !important;
+    }
+  
+    /* Eliminamos la expansión del margen en móvil */
+    .inicioArreglo.sidebar-expanded {
+        margin-left: 200px; /* Ancho del sidebar expandido */
+        width: calc(100% - 220px);
+      }
+  
+    .nombreInicio {
+      padding: 15px;
+    }
+  
+    .tituloInicio {
+      font-size: 1.5rem;
+    }
+  
+    .fechaInicio {
+      font-size: 1rem;
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nombreInicio {
+      width: calc(100% - 90px);
+      margin-left: 70px;
+      margin-right: 20px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 545px) {
+    .nombreInicio {
+      width: calc(100% - 30px);
+      margin-left: 10px !important;
+      margin-right: 20px;
+      padding: 15px;
+    }
+  }
+
+  /* Cuando el sidebar está expandido */
+  .inicioArreglo.sidebar-expanded {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 20px 40px 20px 40px; /* Aumentamos el padding derecho e izquierdo */
+  }
+
+  /* Ajuste del nombreInicio cuando el sidebar está expandido */
+  .inicioArreglo.sidebar-expanded .nombreInicio {
+    margin-right: 40px;
+    margin-left: 40px;
+    width: calc(100% - 80px);
+  }
+
+  /* Ajuste del container cuando el sidebar está expandido */
+  .inicioArreglo.sidebar-expanded .container-custom {
+    margin-right: 40px;
+    margin-left: 40px;
+    width: calc(100% - 80px);
+  }
+
+  /* Media queries para mantener la responsividad */
+  @media (max-width: 770px) {
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+        margin-left: 70px !important;
+        width: calc(100% - 70px) !important;
+        padding: 15px;
+    }
+
+    .inicioArreglo.sidebar-expanded .nombreInicio,
+    .inicioArreglo.sidebar-expanded .container-custom {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: calc(100% - 40px);
+    }
+  }
+
+  /* Media queries para asegurar consistencia en dispositivos móviles */
+  @media (max-width: 768px) {
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 0px !important;
+      width: calc(100% - 80px) !important;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 545px) {
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 0px !important;
+      width: calc(100% - 80px) !important;
+      padding: 10px;
+    }
+  }
+
+  /* Cuando el sidebar está expandido en pantallas grandes */
+  @media (min-width: 768px) {
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 200px !important;
+      width: calc(100% - 200px);
+    }
+  }
+
+  /* Ajustes para pantallas muy pequeñas */
+  @media (max-width: 545px) {
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 0px !important;
+      width: calc(100% - 50px) !important;
+      padding: 10px;
+    }
+  }
+
+  /* Contenido principal */
+  .inicioArreglo {
+    flex: 1;
+    margin-left: 80px !important;
+    padding: 20px;
+    width: calc(100% - 80px);
+    transition: all 0.3s ease;
+  }
+
+  /* Cuando el sidebar está expandido en pantallas grandes */
+  @media (min-width: 770px) {
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 200px !important;
+      width: calc(100% - 200px);
+    }
+  }
+
+  /* Ajustes para tablets y móviles */
+  @media (max-width: 770px) {
+    .sidebar-custom {
+      width: 60px !important;
+    }
+
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 70px !important;
+      width: calc(100% - 70px) !important;
+      padding: 15px;
+    }
+  }
+
+  /* Ajustes para móviles */
+  @media (max-width: 545px) {
+    .sidebar-custom {
+      width: 60px !important;
+    }
+
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 65px !important;
+      width: calc(100% - 65px) !important;
+      padding: 10px;
+    }
+
+    .nombreInicio {
+      width: calc(100% - 20px);
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px;
+    }
+  }
+
+  /* Ajustes específicos para móviles pequeños */
+  @media (max-width: 480px) {
+    .inicioArreglo,
+    .inicioArreglo.sidebar-expanded {
+      margin-left: 65px !important;
+      width: calc(100% - 65px) !important;
+      padding: 8px;
+    }
+  }
+
+  /* Estilos para móvil */
+  @media (max-width: 767px) {
+    .sidebar-custom {
+        overflow: hidden !important;
+    }
+    
+    .sidebar-custom .ps-menu-root,
+    .ps-menu-root > div,
+    .ps-menu-root > div > div:first-child {
+        overflow: hidden !important;
+        height: 100% !important;
+        min-height: unset !important;
+    }
+  }

@@ -1,0 +1,258 @@
+.table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table {
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+  }
+  
+  /* Estilos para los botones */
+  .btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+.block-btn{
+     width: 100px
+}
+
+.block-col{
+    width: 120px
+}
+
+
+  table.first-row tr:first-child th {
+    background-color: #70aa68;
+    
+  }
+  
+  table.first-row tr:first-child th{
+    color: white;
+  }
+
+  .left-align {
+    text-align: left;
+  }
+  
+  .custom-button {
+    background-color: #3d6637;
+    border-color: #3d6637;
+  }
+  
+  .custom-button:hover {
+    background-color: #2c4a28;
+    border-color: #2c4a28;
+  }
+
+
+  /* Estilos para hacer los botones responsivos */
+  @media (max-width: 576px) {
+    .btn {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  
+.calendar-nav-btn {
+  color: #70AA68;
+  border: none;
+  background: none;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.calendar-nav-btn:hover {
+  color: #558b4b;
+  transform: scale(1.1);
+}
+
+.month-title {
+  color: #333;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 600;
+  min-width: 250px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.echarts-for-react {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Ajustes para el contenedor principal */
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/* Ajustes responsive */
+@media (min-width: 1200px) {
+  .echarts-for-react {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .echarts-for-react {
+    padding: 0.5rem;
+  }
+  
+  /* Ajustar tamaños para móviles */
+  .calendar-nav-btn {
+    font-size: 1.8rem;
+  }
+  
+  .month-title {
+    font-size: 1.2rem;
+    min-width: 180px;
+  }
+}
+
+/* Asegurar que el calendario ocupe todo el espacio disponible */
+.row {
+  margin: 0;
+}
+
+.col {
+  padding: 0;
+}
+  
+/* Animación para los eventos del calendario - solo se aplicará al hacer clic */
+@keyframes eventClick {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.calendar-events-cell:active {
+  animation: eventClick 0.3s ease-in-out;
+}
+
+/* Removemos las animaciones automáticas anteriores */
+.event-number {
+  /* Removida la animación automática */
+  transition: transform 0.3s ease;
+}
+
+/* Mantenemos solo el hover effect */
+.calendar-events-cell:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Mejora visual de las celdas del calendario */
+.calendar-cell {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.calendar-cell:hover {
+  background-color: rgba(112, 170, 104, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Estilo para los días de la semana */
+.calendar-dayLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #70AA68;
+}
+
+/* Animación para los números de eventos */
+.event-number {
+  /* Removida la animación automática */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para las celdas con eventos */
+.calendar-events-cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.row.justify-content-center {
+  margin-bottom: 2rem;
+}
+  
+/* Estilos para react-datepicker */
+.custom-datepicker {
+  font-family: inherit !important;
+  border-radius: 8px !important;
+  border: 1px solid #70AA68 !important;
+  font-size: 1rem !important;
+}
+
+.react-datepicker__header {
+  background-color: #70AA68 !important;
+  border-bottom: none !important;
+  padding: 1rem !important;
+}
+
+.react-datepicker__month-container {
+  float: none !important;
+}
+
+.react-datepicker__month-wrapper {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}
+
+.react-datepicker__month-text {
+  width: 4rem !important;
+  margin: 0.2rem !important;
+  line-height: 2rem !important;
+}
+
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--keyboard-selected {
+  background-color: #70AA68 !important;
+  color: white !important;
+}
+
+.react-datepicker__month-text:hover {
+  background-color: rgba(112, 170, 104, 0.1) !important;
+}
+
+.react-datepicker__navigation {
+  top: 1rem !important;
+}
+
+.react-datepicker__year-read-view {
+  color: white !important;
+}
+
+.react-datepicker__year-dropdown {
+  background-color: white !important;
+  border: 1px solid #70AA68 !important;
+}
+  

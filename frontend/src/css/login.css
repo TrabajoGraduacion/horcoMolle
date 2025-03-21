@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.ordenGeneralLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.imagenLogo {
+  width: 28%;
+}
+
+.tituloLogin {
+  color: #000;
+  font-size: 28px;
+  margin-top: 5%;
+  font-weight: 300;
+}
+
+.inputLogin {
+  width: 100%;
+  border-radius: 13px;
+  background-color: #abd3a5;
+  color: white;
+  padding: 3% 2%;
+  margin-bottom: 0%;
+  margin-top: 5%;
+  font-size: 16px;
+  border: solid 1px #abd3a5;
+}
+
+.inputLogin::placeholder {
+  color: white;
+}
+
+.inputOrden {
+  width: 100%;
+  margin-top: 5%;
+} 
+
+.casillaLogin {
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+}
+.textoContraseñaLogin {
+  color: #70aa68;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  text-decoration: none;
+}
+
+.inputCasilla {
+  margin-right: 5%;
+  cursor: pointer;
+  accent-color: #70aa68;
+}
+
+.ordenInputCasillas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4%;
+}
+
+.botonLogin {
+  width: 105%;
+  border-radius: 13px;
+  background: #70aa68;
+  border: solid 3px #70aa68;
+  font-size: 18px;
+  padding: 1.8% 0%;
+  color: white;
+  margin-top: 7%;
+  font-weight: 400;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.botonLogin:active {
+    background: white;
+    color: #70aa68;
+    transform: scale(0.90); 
+  }
+
+.botonLogin:hover {
+  background: white;
+  color: #70aa68;
+}
+
+.errorLogin {
+  color: red;
+  font-size: 14px;
+  margin: 1% 0%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* dispositivos small  */
+
+@media all and (max-width: 767px) {
+    .ordenGeneralLogin {
+        margin-top: 20%;
+      }
+      
+      .imagenLogo {
+        width: 80%;
+      }
+      
+      .tituloLogin {
+        font-size: 23px;
+        margin-top: 15%;
+        width: 90%;
+        text-align: center;
+      }
+      
+      .inputLogin {
+        width: 95%;
+        padding: 4% 2%;
+        margin-top: 5%;
+        font-size: 13px;
+      }
+        
+      .inputOrden {
+        width: 80%;
+        
+      }
+      
+      .casillaLogin {
+        font-size: 12px;
+      }
+      .textoContraseñaLogin {
+        font-size: 12px;
+      }
+      
+      .inputCasilla {
+        margin-right: 5%;
+      }
+      
+      .ordenInputCasillas {
+        margin-top: 8%;
+        width: 100%;
+      }
+      
+      .botonLogin {
+        width: 100%;
+        font-size: 14px;
+        padding: 2% 0%;
+        color: white;
+        margin-top: 8%;
+    
+      }
+       
+      .errorLogin {
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .loginForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3%;
+      }
+}
+ 
+/* dispositivos medium */
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .ordenGeneralLogin {
+        margin-top: 10%;
+      }
+      
+      .imagenLogo {
+        width: 60%;
+      }
+      
+      .tituloLogin {
+        font-size: 23px;
+        margin-top: 5%;
+        width: 90%;
+        text-align: center;
+      }
+      
+      .inputLogin {
+        width: 95%;
+        padding: 4% 2%;
+        margin-top: 5%;
+        font-size: 13px;
+      }
+        
+      .inputOrden {
+        width: 100%;
+        margin-top: 5%;
+      }
+      
+      .casillaLogin {
+        font-size: 12px;
+      }
+      .textoContraseñaLogin {
+        font-size: 12px;
+      }
+      
+      .inputCasilla {
+        margin-right: 5%;
+      }
+      
+      .ordenInputCasillas {
+        margin-top: 8%;
+        width: 100%;
+      }
+      
+      .botonLogin {
+        width: 100%;
+        font-size: 14px;
+        padding: 2% 0%;
+        color: white;
+        margin-top: 8%;
+    
+      }
+       
+      .errorLogin {
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+      }
+}
+
+/* dispositivos large */
+
+@media all and (min-width: 992px) and (max-width: 1025px) {
+    .errorLogin {
+        font-size: 12px;
+        width: 85%;
+      }
+
+      .imagenLogo {
+        width: 35%;
+      }
+
+      .inputLogin {
+        width: 100%;
+      }
+      
+      .inputOrden {
+        width: 100%;
+        margin-top: 5%;
+      }
+            
+      .botonLogin {
+        width: 105%;
+      }
+}
